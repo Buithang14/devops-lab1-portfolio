@@ -88,6 +88,29 @@
             /* Viền màu đồng bộ với nền */
             margin-bottom: 16px;
         }
+
+        .nav {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background: #667eea;
+            color: white;
+        }
     </style>
 </head>
 
@@ -95,6 +118,12 @@
     <div class="container">
         <img src="avatar.png" alt="Avatar của Thắng" class="avatar">
         <h1>Xin chào, Thắng đã test thành công!</h1>
+        <!-- Thanh Điều Hướng (Menu) -->
+        <div class="nav">
+            <a href="index.html" class="active">Trang chủ</a>
+            <a href="about.html">Về tôi</a>
+            <a href="contact.html">Liên hệ</a>
+        </div>
         <h1> Hello, DevOps!</h1>
         <h2>Lab 1 — Website đã được cập nhật tự động!</h2>
 
