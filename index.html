@@ -76,11 +76,25 @@
             color: #38a169;
             font-weight: bold;
         }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            /* Bo tròn ảnh */
+            object-fit: cover;
+            /* Không bị méo ảnh */
+            border: 4px solid #667eea;
+            /* Viền màu đồng bộ với nền */
+            margin-bottom: 16px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <img src="avatar.png" alt="Avatar của Thắng" class="avatar">
+        <h1>Xin chào, Thắng đã test thành công!</h1>
         <h1> Hello, DevOps!</h1>
         <h2>Lab 1 — Website đã được cập nhật tự động!</h2>
 
