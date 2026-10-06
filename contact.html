@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thông tin liên hệ, địa chỉ tại Thái Nguyên và GitHub cá nhân của Ngọc Thắng.">
+    <meta name="theme-color" content="#3b4cca">
     <title>Liên hệ - DevOps Lab 1</title>
     <style>
         * {
@@ -14,16 +16,16 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a5fc1 0%, #5d3a8e 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #222;
         }
 
         .container {
-            background: white;
+            background: #ffffff;
             border-radius: 16px;
             padding: 48px;
             max-width: 600px;
@@ -33,13 +35,13 @@
         }
 
         h1 {
-            color: #667eea;
+            color: #3b4cca;
             margin-bottom: 8px;
             font-size: 32px;
         }
 
         .info {
-            background: #f8f9fa;
+            background: #f0f2f5;
             border-radius: 8px;
             padding: 20px;
             margin: 16px 0;
@@ -48,43 +50,44 @@
 
         .info p {
             margin: 8px 0;
+            line-height: 1.6;
         }
 
         .footer {
             margin-top: 24px;
-            font-size: 13px;
-            color: #999;
+            font-size: 14px;
+            color: #555555;
         }
 
-        /* CSS cho thanh Menu */
         .nav {
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         .nav a {
             text-decoration: none;
-            color: #667eea;
+            color: #3b4cca;
             font-weight: bold;
             padding: 8px 16px;
             border-radius: 20px;
-            background: #f8f9fa;
+            background: #f0f2f5;
             transition: 0.3s;
+            border: 1px solid transparent;
         }
 
         .nav a:hover,
         .nav a.active {
-            background: #667eea;
-            color: white;
+            background: #3b4cca;
+            color: #ffffff;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- Menu: Nút Liên hệ được highlight (active) -->
         <div class="nav">
             <a href="index.html">Trang chủ</a>
             <a href="about.html">Về tôi</a>

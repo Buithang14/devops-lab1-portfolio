@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Lab 1 — My Portfolio</title>
+    <meta name="description"
+        content="Portfolio của Bùi Ngọc Thắng - Sinh viên Kỹ thuật phần mềm. Các dự án DevOps và quy trình CI/CD.">
+    <meta name="theme-color" content="#3b4cca">
+    <title>Trang chủ - DevOps Lab 1</title>
     <style>
         * {
             margin: 0;
@@ -14,38 +17,39 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a5fc1 0%, #5d3a8e 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            color: #222;
         }
 
         .container {
-            background: white;
+            background: #ffffff;
             border-radius: 16px;
             padding: 48px;
             max-width: 600px;
+            width: 100%;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
         h1 {
-            color: #667eea;
+            color: #3b4cca;
             margin-bottom: 8px;
             font-size: 32px;
         }
 
         h2 {
-            color: #764ba2;
+            color: #5d3a8e;
             margin-bottom: 24px;
             font-size: 18px;
             font-weight: normal;
         }
 
         .info {
-            background: #f8f9fa;
+            background: #f0f2f5;
             border-radius: 8px;
             padding: 20px;
             margin: 16px 0;
@@ -54,12 +58,13 @@
 
         .info p {
             margin: 8px 0;
+            line-height: 1.6;
         }
 
         .badge {
             display: inline-block;
-            background: #667eea;
-            color: white;
+            background: #3b4cca;
+            color: #ffffff;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 14px;
@@ -68,70 +73,75 @@
 
         .footer {
             margin-top: 24px;
-            font-size: 13px;
-            color: #999;
+            font-size: 14px;
+            color: #555555;
         }
 
         .status {
-            color: #38a169;
+            color: #2e7d32;
             font-weight: bold;
         }
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            /* Bo tròn ảnh */
-            object-fit: cover;
-            /* Không bị méo ảnh */
-            border: 4px solid #667eea;
-            /* Viền màu đồng bộ với nền */
-            margin-bottom: 16px;
-        }
-
+        /* CSS Menu */
         .nav {
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         .nav a {
             text-decoration: none;
-            color: #667eea;
+            color: #3b4cca;
             font-weight: bold;
             padding: 8px 16px;
             border-radius: 20px;
-            background: #f8f9fa;
+            background: #f0f2f5;
             transition: 0.3s;
+            border: 1px solid transparent;
         }
 
         .nav a:hover,
         .nav a.active {
-            background: #667eea;
-            color: white;
+            background: #3b4cca;
+            color: #ffffff;
+        }
+
+        /* Tối ưu ảnh Avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b4cca;
+            margin-bottom: 16px;
+            background-color: #f0f2f5;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <img src="avatar.png" alt="Avatar của Thắng" class="avatar">
-        <h1>Xin chào, Thắng đã test thành công!</h1>
-        <!-- Thanh Điều Hướng (Menu) -->
+        <!-- Chú ý Menu active -->
         <div class="nav">
             <a href="index.html" class="active">Trang chủ</a>
             <a href="about.html">Về tôi</a>
             <a href="contact.html">Liên hệ</a>
         </div>
-        <h1> Hello, DevOps!</h1>
-        <h2>Lab 1 — Website đã được cập nhật tự động!</h2>
+
+        <!-- Tối ưu Performance: Thêm width, height, loading lazy -->
+        <img src="avatar.jpg" alt="Ảnh đại diện của Thắng" class="avatar" width="120" height="120" loading="lazy"
+            decoding="async">
+
+        <h1>Xin chào, DevOps!</h1>
+        <h2>Lab 1 — Trải nghiệm CI/CD Pipeline</h2>
 
         <div class="info">
-            <p> <strong>Bài học:</strong> DevOps Lab 1 — Tổng quan</p>
-            <p> <strong>Deploy bởi:</strong> GitHub Actions CI/CD</p>
-            <p> <strong>Ngày deploy:</strong> <span id="date"></span></p>
-            <p> <strong>Pipeline status:</strong> <span class="status"> Automated</span></p>
+            <p><strong>Bài học:</strong> DevOps Lab 1 — Tổng quan</p>
+            <p><strong>Deploy bởi:</strong> GitHub Actions CI/CD</p>
+            <p><strong>Ngày cập nhật:</strong> <span id="date">Đang tải...</span></p>
+            <p><strong>Pipeline status:</strong> <span class="status">Automated</span></p>
         </div>
 
         <div>
@@ -139,18 +149,20 @@
             <span class="badge">CSS3</span>
             <span class="badge">Git</span>
             <span class="badge">GitHub Actions</span>
-            <span class="badge">CI/CD</span>
-            <span class="badge">DevOps</span>
+            <span class="badge">Lighthouse CI</span>
         </div>
 
         <div class="footer">
             <p>Deployed automatically via GitHub Actions Pipeline</p>
-            <p> Push code → CI Build → Auto Deploy → Live! </p>
+            <p>Push code → CI Build → Auto Deploy → Live!</p>
         </div>
     </div>
 
-    <script>
-        document.getElementById('date').textContent = new Date().toLocaleDateString('vi-VN');
+    <!-- Tối ưu chặn render bằng defer -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('date').textContent = new Date().toLocaleDateString('vi-VN');
+        });
     </script>
 </body>
 
