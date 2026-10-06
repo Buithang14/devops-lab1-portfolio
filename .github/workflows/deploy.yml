@@ -37,7 +37,7 @@ jobs:
         with:
           configPath: ./lighthouserc.json
           temporaryPublicStorage: true
-          runs: 1
+          runs: 3
 
       # Step 4: Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages

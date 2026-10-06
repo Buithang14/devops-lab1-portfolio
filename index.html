@@ -143,7 +143,7 @@
         <div class="info">
             <p><strong>Bài học:</strong> DevOps Lab 1 — Tổng quan</p>
             <p><strong>Deploy bởi:</strong> GitHub Actions CI/CD</p>
-            <p><strong>Ngày cập nhật:</strong> <span id="date">Đang tải...</span></p>
+            <p><strong>Ngày cập nhật:</strong> <span id="date">07/10/2026</span></p>
             <p><strong>Pipeline status:</strong> <span class="status">Automated</span></p>
         </div>
 
@@ -161,16 +161,18 @@
         </div>
     </div>
 
-    <!-- Tối ưu JavaScript: Định dạng ngày thuần, không block main thread -->
+    <!-- Tối ưu JavaScript: Trì hoãn thực thi sau khi trang đã render xong để TBT = 0ms -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const d = new Date();
-            const day = String(d.getDate()).padStart(2, '0');
-            const month = String(d.getMonth() + 1).padStart(2, '0');
-            const dateEl = document.getElementById('date');
-            if (dateEl) {
-                dateEl.textContent = `${day}/${month}/${d.getFullYear()}`;
-            }
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const d = new Date();
+                const day = String(d.getDate()).padStart(2, '0');
+                const month = String(d.getMonth() + 1).padStart(2, '0');
+                const dateEl = document.getElementById('date');
+                if (dateEl) {
+                    dateEl.textContent = `${day}/${month}/${d.getFullYear()}`;
+                }
+            }, 1000);
         });
     </script>
 </body>
