@@ -31,13 +31,13 @@ jobs:
             exit 1
           fi
 
-      # Step 3: CHẠY GOOGLE LIGHTHOUSE CI ĐỂ CHẤM ĐIỂM WEB (MỚI THÊM)
+      # Step 3: CHẠY GOOGLE LIGHTHOUSE CI ĐỂ CHẤM ĐIỂM WEB
       - name: Audit with Google Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
-          staticDistDir: ./  # Yêu cầu Lighthouse quét các file HTML ở thư mục hiện tại
-          temporaryPublicStorage: true # Tạo một đường link online để xem báo cáo
-          runs: 1 # Chạy quét 1 lần để tiết kiệm thời gian
+          configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
+          runs: 1
 
       # Step 4: Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages
