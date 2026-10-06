@@ -1,19 +1,107 @@
-<div class="container">
-    <!-- Chú ý class="active" đã được chuyển sang Liên hệ -->
-    <div class="nav">
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Về tôi</a>
-        <a href="contact.html" class="active">Liên hệ</a>
-    </div>
+<!DOCTYPE html>
+<html lang="vi">
 
-    <h1>Thông tin liên hệ</h1>
-    <div class="info">
-        <p><strong>Email:</strong> thangbui.dev@gmail.com</p>
-        <p><strong>GitHub:</strong> github.com/ten-github-cua-ban</p>
-        <p><strong>Địa chỉ:</strong> Thái Nguyên, Việt Nam</p>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - DevOps Lab 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <div class="footer">
-        <p>Trang liên hệ</p>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+
+        .info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+            text-align: left;
+        }
+
+        .info p {
+            margin: 8px 0;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* CSS cho thanh Menu */
+        .nav {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: #f8f9fa;
+            transition: 0.3s;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Menu: Nút Liên hệ được highlight (active) -->
+        <div class="nav">
+            <a href="index.html">Trang chủ</a>
+            <a href="about.html">Về tôi</a>
+            <a href="contact.html" class="active">Liên hệ</a>
+        </div>
+
+        <h1>Thông tin liên hệ</h1>
+        <div class="info">
+            <p><strong>Nơi ở:</strong> Thái Nguyên, Việt Nam</p>
+            <p><strong>GitHub:</strong> https://github.com/thangbui</p>
+            <p><strong>Chuyên môn:</strong> Thiết kế RESTful API, quản trị version bằng Git/GitHub.</p>
+        </div>
+
+        <div class="footer">
+            <p>Trang liên hệ - Deployed via GitHub Actions</p>
+        </div>
     </div>
-</div>
+</body>
+
+</html>
