@@ -8,6 +8,7 @@
     <meta name="description"
         content="Portfolio của Bùi Ngọc Thắng - Sinh viên Kỹ thuật phần mềm. Các dự án DevOps và quy trình CI/CD.">
     <meta name="theme-color" content="#3b4cca">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Trang chủ - DevOps Lab 1</title>
     <style>
         * {
@@ -131,8 +132,8 @@
             <a href="contact.html">Liên hệ</a>
         </div>
 
-        <!-- Tối ưu Performance: Thêm width, height, loading lazy -->
-        <img src="avatar.png" alt="Ảnh đại diện của Thắng" class="avatar" width="120" height="120" fetchpriority="high"
+        <!-- Tối ưu Performance: Sử dụng WebP dung lượng nhẹ, kích thước chuẩn -->
+        <img src="avatar.webp" alt="Ảnh đại diện của Thắng" class="avatar" width="120" height="120" fetchpriority="high"
             decoding="async">
 
 
@@ -160,10 +161,16 @@
         </div>
     </div>
 
-    <!-- Tối ưu chặn render bằng defer -->
-    <script defer>
+    <!-- Tối ưu JavaScript: Định dạng ngày thuần, không block main thread -->
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById('date').textContent = new Date().toLocaleDateString('vi-VN');
+            const d = new Date();
+            const day = String(d.getDate()).padStart(2, '0');
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const dateEl = document.getElementById('date');
+            if (dateEl) {
+                dateEl.textContent = `${day}/${month}/${d.getFullYear()}`;
+            }
         });
     </script>
 </body>
