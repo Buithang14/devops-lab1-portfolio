@@ -1,0 +1,6 @@
+1.DevOps workflow tự động hóa những bước nào? 
+Trả lời: Tự động Checkout Code từ kho lưu trữ, tự động Validate (kiểm tra) lỗi file, và tự động Deploy (đẩy) lên môi trường chạy thực tế (GitHub Pages).
+2.Nếu bạn deploy sai làm sao để quay lại? 
+Trả lời: Dùng lệnh git log để lấy mã commit cũ, chạy git reset --hard <mã_commit> sau đó git push --force origin main. Pipeline sẽ tự lấy lại bản code sạch để lên sóng.
+3.Tiết kiệm bao nhiêu thời gian? 
+Trả lời: Chuyển từ quy trình 15 phút mở host, nén file tải lên thành 1 thao tác duy nhất trong 10 giây (git push).
